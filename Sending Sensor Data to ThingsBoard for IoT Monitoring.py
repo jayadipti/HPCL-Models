@@ -1,8 +1,7 @@
 import requests
 import json
 
-# ThingsBoard setup
-THINGSBOARD_URL = "http://demo.thingsboard.io/api/v1/YOUR_ACCESS_TOKEN/telemetry"  # Replace with your access token
+THINGSBOARD_URL = "http://demo.thingsboard.io/api/v1/YOUR_ACCESS_TOKEN/telemetry"  
 
 def send_data_to_thingsboard(data):
     headers = {'Content-Type': 'application/json'}
@@ -12,7 +11,6 @@ def send_data_to_thingsboard(data):
     else:
         print("Failed to send data. Status code:", response.status_code)
 
-# Simulated sensor data
 sensor_data = {
     "temperature": 25.5,
     "pressure": 1.2,
@@ -20,5 +18,5 @@ sensor_data = {
     "output_efficiency": 80.0
 }
 
-# Send data to ThingsBoard
+
 send_data_to_thingsboard(sensor_data)
